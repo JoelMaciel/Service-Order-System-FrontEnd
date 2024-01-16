@@ -1,0 +1,12 @@
+.container {
+    background-color: rgb(221, 231, 236);
+    height: 83%;
+}
+
+i {
+    margin-right: .8rem;
+}
+
+button {
+    margin: 1rem auto 0 1rem;
+}
