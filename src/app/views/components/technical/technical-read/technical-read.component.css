@@ -1,0 +1,19 @@
+.container {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+table {
+    width: 100%;
+    background-color: rgb(108, 104, 109);
+    font-size: bold;
+}
+
+.pagination {
+    background-color: rgb(94, 90, 95);
+}
+
+th {
+    background-color: rgb(94, 90, 95);
+}

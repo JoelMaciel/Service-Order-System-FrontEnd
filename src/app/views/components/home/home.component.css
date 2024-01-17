@@ -3,3 +3,42 @@ mat-card {
     height: 50%;
     margin: 1rem auto 0 auto;
 }
+
+.customCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.customCard img {
+    width: 90%;
+    height: auto;
+    animation: slideInFromLeft 2s ease-out;
+}
+
+.title {
+    font-size: 2rem;
+    background-color: rgb(73, 133, 69);
+    padding: 10px 40px;
+    border-radius: 2px solid;
+    border-radius: 10px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgb(91, 96, 181);
+    padding: 10px 60px;
+    border-radius: 2px solid;
+    border-radius: 20px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
