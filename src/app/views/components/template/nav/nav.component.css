@@ -10,3 +10,13 @@ i {
 button {
     margin: 1rem auto 0 1rem;
 }
+
+a {
+    transition: transform 0.3s ease;
+    color: red;
+}
+
+a:hover {
+    transform: translateY(-5px);
+    color: rgb(175, 95, 195);
+}
