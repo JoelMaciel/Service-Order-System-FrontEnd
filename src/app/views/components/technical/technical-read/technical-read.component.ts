@@ -14,7 +14,7 @@ export class TechnicalReadComponent implements AfterViewInit {
 
   technicians: Technical[] = []
 
-  displayedColumns: string[] = ['id', 'name', 'cpf', 'phoneNumber'];
+  displayedColumns: string[] = ['id', 'name', 'cpf', 'phoneNumber', 'jobFunction', 'action'];
   dataSource = new MatTableDataSource<Technical>(this.technicians);
 
 

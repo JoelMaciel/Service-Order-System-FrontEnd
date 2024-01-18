@@ -24,6 +24,8 @@ import { HomeComponent } from './views/components/home/home.component';
 import { TechnicalReadComponent } from './views/components/technical/technical-read/technical-read.component';
 import { TechnicalCreateComponent } from './views/components/technical/technical-create/technical-create.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { TechnicalUpdateComponent } from './views/components/technical/technical-update/technical-update.component';
+import { TechnicalDeleteComponent } from './views/components/technical/technical-delete/technical-delete.component';
 
 
 
@@ -36,7 +38,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NavComponent,
     HomeComponent,
     TechnicalReadComponent,
-    TechnicalCreateComponent
+    TechnicalCreateComponent,
+    TechnicalUpdateComponent,
+    TechnicalDeleteComponent
   ],
   imports: [
     BrowserModule,
