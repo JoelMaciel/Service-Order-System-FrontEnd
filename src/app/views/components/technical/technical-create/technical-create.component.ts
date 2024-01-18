@@ -15,11 +15,13 @@ export class TechnicalCreateComponent implements OnInit {
     id: " ",
     name: "",
     cpf: "",
+    jobFunction: "",
     phoneNumber: ""
   }
 
   name = new FormControl('', [Validators.minLength(5)]);
   cpf = new FormControl('', [Validators.minLength(11)]);
+  jobFunction = new FormControl('', [Validators.minLength(5)]);
   phoneNumber = new FormControl('', [Validators.minLength(11)]);
 
 
@@ -58,9 +60,9 @@ export class TechnicalCreateComponent implements OnInit {
 
   }
 
-  
+
   errorValidCpf
-  () {
+    () {
     if (this.cpf.invalid) {
       return "The CPF must be between 11 and 15 characters long."
     }
@@ -76,6 +78,15 @@ export class TechnicalCreateComponent implements OnInit {
     return false
 
   }
+
+  errorValidJobFunction() {
+    if (this.jobFunction.invalid) {
+      return "The JobFunction must be between 5 and 50 characters long."
+    }
+    return false
+
+  }
+
 
 
   cancel(): void {

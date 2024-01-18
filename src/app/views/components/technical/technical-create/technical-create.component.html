@@ -13,12 +13,18 @@
     </mat-form-field>
 
     <mat-form-field class="full-width">
+        <mat-label>JobFunction</mat-label>
+        <input [(ngModel)]="technical.jobFunction" [formControl]="jobFunction" required maxlength="50" name="jobFunction" matInput placeholder="Ex. Plumber">
+        <mat-error *ngIf="jobFunction.invalid">{{ errorValidJobFunction() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
         <mat-label>PhoneNumber</mat-label>
-        <input [(ngModel)]="technical.phoneNumber" [formControl]="phoneNumber" required maxlength="15" name="phoneNumber" matInput placeholder="Ex. 000.000.000.-00">
+        <input [(ngModel)]="technical.phoneNumber" [formControl]="phoneNumber" required maxlength="15" name="phoneNumber" matInput placeholder="Ex. (85) 999999999">
         <mat-error *ngIf="phoneNumber.invalid">{{ errorValidPhoneNumber() }}</mat-error>
     </mat-form-field>
 
-    <button (click)="create()" [disabled]="errorValidName() || errorValidCpf() || errorValidPhoneNumber() " class="button-create" mat-stroked-button color="accent">CREATE</button>
+    <button (click)="create()" [disabled]="errorValidName() || errorValidCpf() || errorValidPhoneNumber() || errorValidJobFunction() " class="button-create" mat-stroked-button color="accent">CREATE</button>
     <button (click)="cancel()" class="button-cancel" mat-stroked-button color="warn">CANCEL</button>
 
 </form>
