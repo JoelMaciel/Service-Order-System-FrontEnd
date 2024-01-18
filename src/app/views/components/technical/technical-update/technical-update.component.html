@@ -7,12 +7,6 @@
     </mat-form-field>
 
     <mat-form-field class="full-width">
-        <mat-label>CPF</mat-label>
-        <input [(ngModel)]="technical.cpf" [formControl]="cpf" required maxlength="15" name="cpf" matInput placeholder="Ex. 000.000.000.-00">
-        <mat-error *ngIf="cpf.invalid">{{ errorValidCpf() }}</mat-error>
-    </mat-form-field>
-
-    <mat-form-field class="full-width">
         <mat-label>JobFunction</mat-label>
         <input [(ngModel)]="technical.jobFunction" [formControl]="jobFunction" required maxlength="50" name="jobFunction" matInput placeholder="Ex. Plumber">
         <mat-error *ngIf="jobFunction.invalid">{{ errorValidJobFunction() }}</mat-error>
@@ -24,7 +18,7 @@
         <mat-error *ngIf="phoneNumber.invalid">{{ errorValidPhoneNumber() }}</mat-error>
     </mat-form-field>
 
-    <button class="mat-elevation-z8" (click)="create()" [disabled]="errorValidName() || errorValidCpf() || errorValidPhoneNumber() || errorValidJobFunction() " class="button-create" mat-stroked-button color="accent">CREATE</button>
+    <button class="mat-elevation-z8" (click)="update()" [disabled]="errorValidName() || errorValidCpf() || errorValidPhoneNumber() || errorValidJobFunction() " class="button-create" mat-stroked-button color="accent">UPDATE</button>
     <button class="mat-elevation-z8" (click)="cancel()" class="button-cancel" mat-stroked-button color="warn">CANCEL</button>
 
-</form>
+</form>yy

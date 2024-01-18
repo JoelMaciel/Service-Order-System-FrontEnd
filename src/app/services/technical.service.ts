@@ -28,6 +28,17 @@ export class TechnicalService {
     return this.http.post<Technical>(url, technical)
   }
 
+  update(technical: Technical): Observable<Technical> {
+    const url = `${this.baseUrl}/technicians/${technical.id}`;
+    return this.http.patch<Technical>(url, technical);
+  }
+
+  findById(id: any): Observable<Technical> {
+    const url = `${this.baseUrl}/technicians/${id}`;
+    return this.http.get<Technical>(url);
+
+  }
+
   message(msg: string): void {
     this.snackBar.open(`${msg}`, 'OK',
       {

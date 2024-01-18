@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/components/home/home.component';
 import { TechnicalReadComponent } from './views/components/technical/technical-read/technical-read.component';
 import { TechnicalCreateComponent } from './views/components/technical/technical-create/technical-create.component';
+import { TechnicalUpdateComponent } from './views/components/technical/technical-update/technical-update.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'technicians/create',
     component: TechnicalCreateComponent
+  },
+  {
+    path: 'technicians/update/:id',
+    component: TechnicalUpdateComponent
   }
 ];
 
