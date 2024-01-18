@@ -22,6 +22,9 @@ import { FooterComponent } from './views/components/template/footer/footer.compo
 import { NavComponent } from './views/components/template/nav/nav.component';
 import { HomeComponent } from './views/components/home/home.component';
 import { TechnicalReadComponent } from './views/components/technical/technical-read/technical-read.component';
+import { TechnicalCreateComponent } from './views/components/technical/technical-create/technical-create.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 
@@ -32,10 +35,12 @@ import { TechnicalReadComponent } from './views/components/technical/technical-r
     FooterComponent,
     NavComponent,
     HomeComponent,
-    TechnicalReadComponent
+    TechnicalReadComponent,
+    TechnicalCreateComponent
   ],
   imports: [
     BrowserModule,
+    MatSnackBarModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
