@@ -55,3 +55,7 @@ th {
 #edit {
     color: rgba(213, 173, 52, 0.734);
 }
+
+#delete {
+    color: rgba(190, 20, 11, 0.548);
+}

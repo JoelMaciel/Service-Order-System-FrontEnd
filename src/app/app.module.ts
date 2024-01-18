@@ -25,6 +25,7 @@ import { TechnicalReadComponent } from './views/components/technical/technical-r
 import { TechnicalCreateComponent } from './views/components/technical/technical-create/technical-create.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TechnicalUpdateComponent } from './views/components/technical/technical-update/technical-update.component';
+import { TechnicalDeleteComponent } from './views/components/technical/technical-delete/technical-delete.component';
 
 
 
@@ -38,7 +39,8 @@ import { TechnicalUpdateComponent } from './views/components/technical/technical
     HomeComponent,
     TechnicalReadComponent,
     TechnicalCreateComponent,
-    TechnicalUpdateComponent
+    TechnicalUpdateComponent,
+    TechnicalDeleteComponent
   ],
   imports: [
     BrowserModule,

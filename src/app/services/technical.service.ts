@@ -39,8 +39,13 @@ export class TechnicalService {
 
   }
 
+  delete(id: any): Observable<void> {
+    const url = `${this.baseUrl}/technicians/${id}`;
+    return this.http.delete<void>(url);
+  }
+
   message(msg: string): void {
-    this.snackBar.open(`${msg}`, 'OK',
+    this.snackBar.open(`${msg}`, 'Thanks You',
       {
         horizontalPosition: 'end',
         verticalPosition: 'top',
