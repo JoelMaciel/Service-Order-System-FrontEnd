@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Technical } from 'src/app/models/technical';
 import { TechnicalService } from 'src/app/services/technical.service';
 
 @Component({
-  selector: 'app-technical-create',
-  templateUrl: './technical-create.component.html',
-  styleUrls: ['./technical-create.component.css']
+  selector: 'app-technical-update',
+  templateUrl: './technical-update.component.html',
+  styleUrls: ['./technical-update.component.css']
 })
-export class TechnicalCreateComponent implements OnInit {
+export class TechnicalUpdateComponent implements OnInit {
+
+  technical_id = '';
+
 
   technical: Technical = {
     id: " ",
@@ -19,37 +22,44 @@ export class TechnicalCreateComponent implements OnInit {
     phoneNumber: ""
   }
 
+
+
   name = new FormControl('', [Validators.minLength(5)]);
   cpf = new FormControl('', [Validators.minLength(11)]);
   jobFunction = new FormControl('', [Validators.minLength(5)]);
   phoneNumber = new FormControl('', [Validators.minLength(11)]);
-
-
+  
 
   constructor(
     private router: Router,
-    private service: TechnicalService
+    private service: TechnicalService,
+    private route: ActivatedRoute
 
   ) { }
 
   ngOnInit(): void {
+    this.technical_id = this.route.snapshot.paramMap.get('id')!
+    this.findById();
+  }
+  
+
+  update(): void {
+    this.service.update(this.technical).subscribe((response) => {
+      this.router.navigate(["technicians"])
+      this.service.message("Technician successfully updated !")
+
+    })
   }
 
-  create(): void {
-    this.service.create(this.technical).subscribe((response) => {
-      this.router.navigate(["technicians"])
-      this.service.message("Technician successfully created!")
-    }, err => {
-      if (err.error.detail.match("already registered")) {
-        this.service.message(err.error.detail)
-      } else if (err.error.objects[0].userMessage === "Invalid CPF format. Correct format xxx.xxx.xxx-xx") {
-        this.service.message(
-          "Invalid CPF.")
-      } else {
-        console.log(err);
-
-      }
+  findById(): void {
+    this.service.findById(this.technical_id).subscribe(response => {
+      this.technical = response;
     })
+   }
+   
+
+  cancel(): void {
+    this.router.navigate(["technicians"])
   }
 
   errorValidName() {
@@ -85,10 +95,6 @@ export class TechnicalCreateComponent implements OnInit {
     }
     return false
 
-  }
-
-  cancel(): void {
-    this.router.navigate(["technicians"])
   }
 
 }

@@ -24,7 +24,7 @@ button:hover {
 }
 
 .create button {
-    background-color: rgb(129, 132, 129);
+    background-color: rgba(65, 111, 65, 0.585);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,4 +50,12 @@ table {
 
 th {
     background-color: rgb(94, 90, 95);
+}
+
+#edit {
+    color: rgba(213, 173, 52, 0.734);
+}
+
+#delete {
+    color: rgba(190, 20, 11, 0.548);
 }
