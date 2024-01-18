@@ -1,3 +1,37 @@
+.create {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.create h1 {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(111, 109, 109);
+    text-decoration: underline;
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+button {
+    transition: transform 0.3s ease;
+    color: red;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    color: rgb(13, 86, 52);
+}
+
+.create button {
+    background-color: rgb(129, 132, 129);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    margin: 1rem auto;
+}
+
 .container {
     width: 90%;
     margin-right: auto;
