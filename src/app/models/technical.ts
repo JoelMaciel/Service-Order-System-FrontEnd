@@ -1,5 +1,5 @@
 export interface Technical {
-    id?: number;
+    id?: any
     name: String;
     cpf: String;
     phoneNumber: String;
