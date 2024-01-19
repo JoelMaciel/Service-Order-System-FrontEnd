@@ -29,6 +29,7 @@ import { TechnicalDeleteComponent } from './views/components/technical/technical
 import { CustomerReadComponent } from './views/components/customer/customer-read/customer-read.component';
 import { CustomerCreateComponent } from './views/components/customer/customer-create/customer-create.component';
 import { CustomerUpdateComponent } from './views/components/customer/customer-update/customer-update.component';
+import { CustomerDeleteComponent } from './views/components/customer/customer-delete/customer-delete.component';
 
 
 
@@ -46,7 +47,8 @@ import { CustomerUpdateComponent } from './views/components/customer/customer-up
     TechnicalDeleteComponent,
     CustomerReadComponent,
     CustomerCreateComponent,
-    CustomerUpdateComponent
+    CustomerUpdateComponent,
+    CustomerDeleteComponent
   ],
   imports: [
     BrowserModule,
