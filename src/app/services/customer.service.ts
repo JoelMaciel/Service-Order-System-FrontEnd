@@ -29,7 +29,7 @@ export class CustomerService {
 
   update(customer: Customer): Observable<Customer> {
     const url = `${this.baseUrl}/customers/${customer.id}`;
-    return this.http.patch<Customer>(url, customer);
+    return this.http.put<Customer>(url, customer);
   }
 
   findById(id: any): Observable<Customer> {
