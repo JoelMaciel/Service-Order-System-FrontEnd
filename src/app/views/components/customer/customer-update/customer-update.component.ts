@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Customer } from 'src/app/models/customer';
 import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
-  selector: 'app-customer-create',
-  templateUrl: './customer-create.component.html',
-  styleUrls: ['./customer-create.component.css']
+  selector: 'app-customer-update',
+  templateUrl: './customer-update.component.html',
+  styleUrls: ['./customer-update.component.css']
 })
-export class CustomerCreateComponent implements OnInit {
+export class CustomerUpdateComponent implements OnInit {
+
+  customer_id = "";
 
   customer: Customer = {
     id: "",
@@ -22,19 +24,22 @@ export class CustomerCreateComponent implements OnInit {
   cnpj = new FormControl('', [Validators.minLength(14)]);
   phoneNumber = new FormControl('', [Validators.minLength(11)]);
 
+
+
   constructor(
     private router: Router,
     private service: CustomerService,
-   
+    private route: ActivatedRoute
 
   ) { }
 
   ngOnInit(): void {
-
+    this.customer_id = this.route.snapshot.paramMap.get('id')!;
+    this.findById();
   };
 
-  create(): void {
-    this.service.create(this.customer).subscribe((response) => {
+  update(): void {
+    this.service.update(this.customer).subscribe((response) => {
       this.router.navigate(["customers"])
       this.service.message("Customer successfully updated!")
     }, err => {
@@ -50,6 +55,13 @@ export class CustomerCreateComponent implements OnInit {
       }
     })
   }
+
+  findById(): void {
+    this.service.findById(this.customer_id).subscribe(response => {
+      this.customer = response;
+    })
+  }
+
 
   errorValidName() {
     if (this.name.invalid) {

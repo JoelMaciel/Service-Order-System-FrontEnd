@@ -1,0 +1,46 @@
+.form {
+    background-color: rgb(122, 116, 116);
+    width: 50%;
+    margin: auto;
+    padding: 4rem 2rem;
+    border-radius: .5rem;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: 550;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgba(40, 127, 79, 0.5);
+}
+
+.full-width {
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: .7rem;
+}
+
+button {
+    width: 100%;
+    margin-bottom: .5rem;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    color: rgba(129, 7, 138, 0.957);
+}
+
+.button-update {
+    background-color: rgba(26, 107, 63, 0.266);
+    color: rgb(206, 221, 206);
+    margin-top: .5rem;
+}
+
+.button-cancel {
+    background-color: rgba(223, 223, 25, 0.266);
+    color: rgb(209, 208, 202);
+}

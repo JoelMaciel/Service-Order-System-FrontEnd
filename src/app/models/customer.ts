@@ -1,6 +1,6 @@
 export interface Customer {
     id?: any
     name: String;
-    cpf: String;
+    cnpj: String;
     phoneNumber: String;
 }
