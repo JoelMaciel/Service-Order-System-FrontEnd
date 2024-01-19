@@ -5,6 +5,7 @@ import { TechnicalReadComponent } from './views/components/technical/technical-r
 import { TechnicalCreateComponent } from './views/components/technical/technical-create/technical-create.component';
 import { TechnicalUpdateComponent } from './views/components/technical/technical-update/technical-update.component';
 import { TechnicalDeleteComponent } from './views/components/technical/technical-delete/technical-delete.component';
+import { CustomerReadComponent } from './views/components/customer/customer-read/customer-read.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'technicians/delete/:id',
     component: TechnicalDeleteComponent
+  },
+  {
+    path: "customers",
+    component: CustomerReadComponent
   }
 ];
 
