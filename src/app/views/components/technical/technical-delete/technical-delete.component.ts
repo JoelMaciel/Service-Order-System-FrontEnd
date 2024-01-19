@@ -38,16 +38,18 @@ export class TechnicalDeleteComponent implements OnInit {
       this.technical = response;
     })
   }
-
   delete(): void {
-    this.service.delete(this.technical_id).subscribe(response => {
-      this.router.navigate(["technicians"])
-      this.service.message("Technician successfully deleted")
-    }, err => {
-      if (err.error.error.match("has work orders")) {
-        this.service.message(err.error.error)
+    this.service.delete(this.technical_id).subscribe(
+      response => {
+        this.router.navigate(["technicians"]);
+        this.service.message("Technician successfully deleted");
+      },
+      err => {
+        if (err.error.detail.includes("pending service order")) {
+          this.service.message(err.error.detail);
+        }
       }
-    })
+    );
   }
 
 
