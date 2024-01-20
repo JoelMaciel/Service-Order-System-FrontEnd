@@ -11,6 +11,7 @@ import { CustomerUpdateComponent } from './views/components/customer/customer-up
 import { CustomerDeleteComponent } from './views/components/customer/customer-delete/customer-delete.component';
 import { OrderserviceReadComponent } from './views/components/orderservice/orderservice-read/orderservice-read.component';
 import { OrderserviceCreateComponent } from './views/components/orderservice/orderservice-create/orderservice-create.component';
+import { OrderserviceUpdateComponent } from './views/components/orderservice/orderservice-update/orderservice-update.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
     path: "orderservices/create",
     component: OrderserviceCreateComponent
   },
+  {
+    path:"orderservices/update/:id",
+    component: OrderserviceUpdateComponent
+  }
 ];
 
 @NgModule({

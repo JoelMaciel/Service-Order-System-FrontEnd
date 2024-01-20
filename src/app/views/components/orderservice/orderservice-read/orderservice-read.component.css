@@ -74,3 +74,14 @@ td.medium {
     color: #e1cf06;
     font-weight: 500;
 }
+
+a {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: .5rem;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+a:hover {
+    transform: translateY(-7px);
+}
