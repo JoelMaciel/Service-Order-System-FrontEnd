@@ -30,6 +30,7 @@ import { CustomerReadComponent } from './views/components/customer/customer-read
 import { CustomerCreateComponent } from './views/components/customer/customer-create/customer-create.component';
 import { CustomerUpdateComponent } from './views/components/customer/customer-update/customer-update.component';
 import { CustomerDeleteComponent } from './views/components/customer/customer-delete/customer-delete.component';
+import { OrderserviceReadComponent } from './views/components/orderservice/orderservice-read/orderservice-read.component';
 
 
 
@@ -48,7 +49,8 @@ import { CustomerDeleteComponent } from './views/components/customer/customer-de
     CustomerReadComponent,
     CustomerCreateComponent,
     CustomerUpdateComponent,
-    CustomerDeleteComponent
+    CustomerDeleteComponent,
+    OrderserviceReadComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { CustomerReadComponent } from './views/components/customer/customer-read
 import { CustomerCreateComponent } from './views/components/customer/customer-create/customer-create.component';
 import { CustomerUpdateComponent } from './views/components/customer/customer-update/customer-update.component';
 import { CustomerDeleteComponent } from './views/components/customer/customer-delete/customer-delete.component';
+import { OrderserviceReadComponent } from './views/components/orderservice/orderservice-read/orderservice-read.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,10 @@ const routes: Routes = [
   }, {
     path: "customers/delete/:id",
     component: CustomerDeleteComponent
+  },
+  {
+    path: "orderservices",
+    component: OrderserviceReadComponent
   }
 ];
 
