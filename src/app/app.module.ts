@@ -26,6 +26,10 @@ import { TechnicalCreateComponent } from './views/components/technical/technical
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TechnicalUpdateComponent } from './views/components/technical/technical-update/technical-update.component';
 import { TechnicalDeleteComponent } from './views/components/technical/technical-delete/technical-delete.component';
+import { CustomerReadComponent } from './views/components/customer/customer-read/customer-read.component';
+import { CustomerCreateComponent } from './views/components/customer/customer-create/customer-create.component';
+import { CustomerUpdateComponent } from './views/components/customer/customer-update/customer-update.component';
+import { CustomerDeleteComponent } from './views/components/customer/customer-delete/customer-delete.component';
 
 
 
@@ -40,7 +44,11 @@ import { TechnicalDeleteComponent } from './views/components/technical/technical
     TechnicalReadComponent,
     TechnicalCreateComponent,
     TechnicalUpdateComponent,
-    TechnicalDeleteComponent
+    TechnicalDeleteComponent,
+    CustomerReadComponent,
+    CustomerCreateComponent,
+    CustomerUpdateComponent,
+    CustomerDeleteComponent
   ],
   imports: [
     BrowserModule,

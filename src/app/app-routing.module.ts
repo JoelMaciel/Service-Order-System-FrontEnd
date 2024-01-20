@@ -5,6 +5,10 @@ import { TechnicalReadComponent } from './views/components/technical/technical-r
 import { TechnicalCreateComponent } from './views/components/technical/technical-create/technical-create.component';
 import { TechnicalUpdateComponent } from './views/components/technical/technical-update/technical-update.component';
 import { TechnicalDeleteComponent } from './views/components/technical/technical-delete/technical-delete.component';
+import { CustomerReadComponent } from './views/components/customer/customer-read/customer-read.component';
+import { CustomerCreateComponent } from './views/components/customer/customer-create/customer-create.component';
+import { CustomerUpdateComponent } from './views/components/customer/customer-update/customer-update.component';
+import { CustomerDeleteComponent } from './views/components/customer/customer-delete/customer-delete.component';
 
 const routes: Routes = [
   {
@@ -26,6 +30,21 @@ const routes: Routes = [
   {
     path: 'technicians/delete/:id',
     component: TechnicalDeleteComponent
+  },
+  {
+    path: "customers",
+    component: CustomerReadComponent
+  },
+  {
+    path: "customers/create",
+    component: CustomerCreateComponent
+  },
+  {
+    path: "customers/update/:id",
+    component: CustomerUpdateComponent
+  }, {
+    path: "customers/delete/:id",
+    component: CustomerDeleteComponent
   }
 ];
 

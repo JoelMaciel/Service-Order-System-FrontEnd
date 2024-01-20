@@ -1,0 +1,24 @@
+<form class="form mat-elevation-z8">
+    <h1>Insert a new customer</h1>
+    <mat-form-field class="full-width">
+        <mat-label>Name</mat-label>
+        <input [(ngModel)]="customer.name" [formControl]="name" required maxlength="30" name="name" matInput placeholder="Ex. Joel Maciel">
+        <mat-error *ngIf="name.invalid">{{ errorValidName() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>CNPJ</mat-label>
+        <input [(ngModel)]="customer.cnpj" [formControl]="cnpj" required maxlength="18" name="cnpj" matInput placeholder="Ex. 00.000.000/000-00">
+        <mat-error *ngIf="cnpj.invalid">{{ errorValidCnpj }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>PhoneNumber</mat-label>
+        <input [(ngModel)]="customer.phoneNumber" [formControl]="phoneNumber" required maxlength="15" name="phoneNumber" matInput placeholder="Ex. (85) 999999999">
+        <mat-error *ngIf="phoneNumber.invalid">{{ errorValidPhoneNumber() }}</mat-error>
+    </mat-form-field>
+
+    <button class="mat-elevation-z8" (click)="create()" [disabled]="errorValidName() || errorValidCnpj() || errorValidPhoneNumber() " class="button-create" mat-stroked-button color="accent">CREATE</button>
+    <button class="mat-elevation-z8" (click)="cancel()" class="button-cancel" mat-stroked-button color="warn">CANCEL</button>
+
+</form>
