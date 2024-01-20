@@ -45,10 +45,6 @@ export class OrderserviceReadComponent implements AfterViewInit {
     })
   }
 
-  navigateToCreate(): void {
-    this.router.navigate(["orderservices/create"])
-  }
-
   listTechnicians(): void {
     this.orderservices.forEach(orderService => {
       this.technicianService.findById(orderService.technician).subscribe(response => {
@@ -65,5 +61,16 @@ export class OrderserviceReadComponent implements AfterViewInit {
 
     });
   }
+
+  priority(colorPriority: string): string {
+    return colorPriority === 'LOW' ? 'low'
+      : colorPriority === 'MEDIUM' ? 'medium' :
+        'high';
+  }
+
+  navigateToCreate(): void {
+    this.router.navigate(["orderservices/create"])
+  }
+
 
 }

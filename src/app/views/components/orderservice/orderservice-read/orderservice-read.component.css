@@ -59,3 +59,18 @@ th {
 #delete {
     color: rgba(190, 20, 11, 0.548);
 }
+
+td.low {
+    color: #3a932e;
+    font-weight: 500;
+}
+
+td.high {
+    color: #882802;
+    font-weight: 500;
+}
+
+td.medium {
+    color: #e1cf06;
+    font-weight: 500;
+}
