@@ -1,0 +1,45 @@
+.container {
+    background-color: #555151;
+    width: 65%;
+    margin: auto;
+    padding: 1rem 4rem;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: 550;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgba(159, 150, 23, 0.5);
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.full-width {
+    width: 100%;
+}
+
+textarea {
+    min-height: 4rem;
+    max-height: 13rem;
+}
+
+button {
+    width: 100%;
+    margin-bottom: .5rem;
+    color: rgb(90, 131, 112);
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    background-color: rgba(143, 102, 151, 0.482);
+}
