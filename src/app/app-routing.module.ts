@@ -12,6 +12,7 @@ import { CustomerDeleteComponent } from './views/components/customer/customer-de
 import { OrderserviceReadComponent } from './views/components/orderservice/orderservice-read/orderservice-read.component';
 import { OrderserviceCreateComponent } from './views/components/orderservice/orderservice-create/orderservice-create.component';
 import { OrderserviceUpdateComponent } from './views/components/orderservice/orderservice-update/orderservice-update.component';
+import { OrderserviceViewComponent } from './views/components/orderservice/orderservice-view/orderservice-view.component';
 
 const routes: Routes = [
   {
@@ -60,6 +61,10 @@ const routes: Routes = [
   {
     path:"orderservices/update/:id",
     component: OrderserviceUpdateComponent
+  },
+  {
+    path:"orderservices/view/:id",
+    component: OrderserviceViewComponent
   }
 ];
 
