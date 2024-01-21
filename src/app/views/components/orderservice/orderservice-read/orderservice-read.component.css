@@ -1,0 +1,87 @@
+.create {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.create h1 {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(111, 109, 109);
+    text-decoration: underline;
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+button {
+    transition: transform 0.3s ease;
+    color: red;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    color: rgb(13, 86, 52);
+}
+
+.create button {
+    background-color: rgba(65, 111, 65, 0.585);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    margin: 1rem auto;
+}
+
+.container {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+table {
+    width: 100%;
+    background-color: rgb(108, 104, 109);
+    font-size: bold;
+}
+
+.pagination {
+    background-color: rgb(94, 90, 95);
+}
+
+th {
+    background-color: rgb(94, 90, 95);
+}
+
+#edit {
+    color: rgba(213, 173, 52, 0.734);
+}
+
+#delete {
+    color: rgba(190, 20, 11, 0.548);
+}
+
+td.low {
+    color: #3a932e;
+    font-weight: 500;
+}
+
+td.high {
+    color: #882802;
+    font-weight: 500;
+}
+
+td.medium {
+    color: #e1cf06;
+    font-weight: 500;
+}
+
+a {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: .5rem;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+a:hover {
+    transform: translateY(-7px);
+}

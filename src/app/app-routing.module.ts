@@ -9,6 +9,10 @@ import { CustomerReadComponent } from './views/components/customer/customer-read
 import { CustomerCreateComponent } from './views/components/customer/customer-create/customer-create.component';
 import { CustomerUpdateComponent } from './views/components/customer/customer-update/customer-update.component';
 import { CustomerDeleteComponent } from './views/components/customer/customer-delete/customer-delete.component';
+import { OrderserviceReadComponent } from './views/components/orderservice/orderservice-read/orderservice-read.component';
+import { OrderserviceCreateComponent } from './views/components/orderservice/orderservice-create/orderservice-create.component';
+import { OrderserviceUpdateComponent } from './views/components/orderservice/orderservice-update/orderservice-update.component';
+import { OrderserviceViewComponent } from './views/components/orderservice/orderservice-view/orderservice-view.component';
 
 const routes: Routes = [
   {
@@ -45,6 +49,22 @@ const routes: Routes = [
   }, {
     path: "customers/delete/:id",
     component: CustomerDeleteComponent
+  },
+  {
+    path: "orderservices",
+    component: OrderserviceReadComponent
+  },
+  {
+    path: "orderservices/create",
+    component: OrderserviceCreateComponent
+  },
+  {
+    path:"orderservices/update/:id",
+    component: OrderserviceUpdateComponent
+  },
+  {
+    path:"orderservices/view/:id",
+    component: OrderserviceViewComponent
   }
 ];
 
